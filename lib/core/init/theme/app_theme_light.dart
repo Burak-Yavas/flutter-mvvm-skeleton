@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 import '../../constants/app/app_constants.dart';
 import 'app_theme.dart';
@@ -18,10 +19,10 @@ class AppThemeLight extends AppTheme with ILightTheme {
         colorScheme: _appColorScheme,
         textTheme: textTheme(),
         appBarTheme: ThemeData.light().appBarTheme.copyWith(
-            brightness: Brightness.light,
             color: Colors.transparent,
             elevation: 0,
-            iconTheme: const IconThemeData(color: Colors.black87, size: 21)),
+            iconTheme: const IconThemeData(color: Colors.black87, size: 21),
+            systemOverlayStyle: SystemUiOverlayStyle.light),
         inputDecorationTheme: const InputDecorationTheme(
             focusColor: Colors.black12,
             labelStyle: TextStyle(),
